@@ -1,0 +1,118 @@
+/* app css stylesheet */
+
+[ng-cloak] {
+	display: none;
+}
+
+.hmw-document {
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+
+.hmw-well {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.hmw-well-header {
+	margin-top: 0;
+}
+
+.hmw-well-separator {
+	margin-bottom: 0;
+}
+
+.hmw-hr {
+	border-color: #CCCCCC;
+}
+
+.about-spacer {
+	position: relative;
+	top: -5px;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.portfolio-list-spacer {
+	padding-bottom: 5px;
+}
+
+.portfolio-ss-comment-spacer {
+	padding-bottom: 8px;
+}
+
+.accordion-top-spacer {
+	padding-top: 10px;
+}
+
+.project-collapsible {
+	margin-left: -20px;
+	margin-bottom: 0;
+}
+
+.multi-column-list-adjustment {
+	margin-left: -20px;
+	padding-right: 5px;
+}
+
+.sd-tb-image-size {
+	width: 128px;
+	height: 110px;
+}
+
+.ap-tb-image-size {
+	width: 128px;
+	height: 91px;
+}
+
+.mcs-tb-image-size {
+	width: 128px;
+	height: 96px;
+}
+
+.mxpo-tb-image-size {
+	width: 128px;
+	height: 98px;
+}
+
+.aast-tb-image-size {
+	width: 68px;
+	height: 128px;
+}
+
+.fa-adjustment {
+	position: relative;
+	top: 2px;
+}
+
+.alert-spacer {
+	position: relative;
+	top: 10px;
+}
+
+.blueimp-gallery > .slides > .slide > .slide-content {
+	margin: auto;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 90%;
+	opacity: 1;
+}
+.blueimp-gallery > .mytitle {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	margin: 0 40px 0 0;
+	font-size: 20px;
+	line-height: 30px;
+	color: #fff;
+	text-shadow: 0 0 2px #000;
+	opacity: 0.8;
+	display: block;
+}

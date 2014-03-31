@@ -1,0 +1,37 @@
+[
+	{
+		"id": "home",
+		"name": "",
+		"url": "",
+		"alt": "",
+		"icon": ""
+	},
+	{
+		"id": "about",
+		"name": "",
+		"url": "",
+		"alt": "",
+		"icon": ""
+	},
+	{
+		"id": "resume",
+		"name": "",
+		"url": "",
+		"alt": "",
+		"icon": ""
+	},
+	{
+		"id": "portfolio",
+		"name": "",
+		"url": "",
+		"alt": "",
+		"icon": ""
+	},
+	{
+		"id": "contact",
+		"name": "",
+		"url": "",
+		"alt": "",
+		"icon": ""
+	}
+]

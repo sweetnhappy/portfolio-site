@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="hmwSite" ng-init="currentPage='contact'">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Helmut Wollenberg - Junior Software Developer - Contact</title>
+
+		<!-- Stylesheets -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+		<link href="css/blueimp-gallery.min.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap-image-gallery.min.css" rel="stylesheet" type="text/css">
+		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="app/css/hmw-site.css" rel="stylesheet" type="text/css">
+
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" type="text/javascript"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" type="text/javascript"></script>
+		<![endif]-->
+	</head>
+	<body class="hmw-document" role="document">
+	
+		<!-- Fixed Navbar -->
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<span class="navbar-brand">Helmut Wollenberg</span>
+				</div>
+				
+				<div ng-controller="NavbarLinksCtrl" class="navbar-collapse collapse pull-right">
+					<ul class="nav navbar-nav">
+						<li ng-repeat="link in navbarLinks" ng-class="{'active': isLinkActive(link.id)}">
+							<a ng-href="{{isLinkActive(link.id) ? '#' : link.url}}" alt="{{link.alt}}">
+								<span class="glyphicon {{link.icon}}"></span>&nbsp;&nbsp;{{link.name}}
+							</a>
+						</li>
+					</ul>
+				</div><!-- /.nav-collapse -->
+				
+			</div>
+		</div>
+		
+		<!-- Main Content -->
+		<div class="container" role="main">
+			
+			<noscript>
+				<div class="alert alert-warning">
+					<strong>Note: </strong>This site requires Javascript to be enabled.
+				</div>
+			</noscript>
+			
+			<div class="well hmw-well">
+				<h2 class="hmw-well-header">
+					Contact Me
+				</h2><br />
+				<p class="lead">
+					So you want to get in touch with me?&nbsp;&nbsp;Great!&nbsp;&nbsp;Please use one of the following methods:
+				</p>
+				<h3>
+					<span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Email: 
+					<a href="helmut(dot)chwk(at)gmail(dot)com" class="email">
+						helmut(dot)chwk(at)gmail(dot)com
+					</a>
+				</h3>
+				<h3>
+					<span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Phone: 
+					<span id="phone">604(dash)858(dash)6835</span>
+				</h3>
+				<hr class="hr" style="border-color: #CCCCCC;" />
+				<p class="lead">
+					Want more?&nbsp;&nbsp;Here are some links to other sites around the web where I have accounts:
+				</p>
+				<h3>
+					<i class="fa fa-github fa-lg"></i>&nbsp;&nbsp;
+					<span class="fa-adjustment">
+						GitHub: <a href="https://github.com/sweetnhappy" target="_blank" alt="My GitHub Account" title="My GitHub Account" data-toggle="tooltip" data-placement="bottom">sweetnhappy</a>
+					</span>
+				</h3>
+				<h3>
+					<i class="fa fa-linkedin-square fa-lg"></i>&nbsp;&nbsp;
+					<span class="fa-adjustment">
+						LinkedIn: <a href="http://ca.linkedin.com/pub/helmut-wollenberg/92/8b7/20b/" target="_blank" alt="My LinkedIn Account" title="My LinkedIn Account" data-toggle="tooltip" data-placement="bottom">Helmut Wollenberg</a>
+					</span>
+				</h3>
+			</div>
+			
+		</div> <!-- /container -->
+		
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<p class="text-center">Copyright &copy; 2014 Helmut Wollenberg</p>
+			</div>
+		</footer>
+		
+		<!-- Scripts -->
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/jquery.blueimp-gallery.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap-image-gallery.min.js" type="text/javascript"></script>
+		<script src="angular_components/angular.min.js" type="text/javascript"></script>
+		<script src="angular_components/angular-resource.min.js" type="text/javascript"></script>
+		<script src="app/js/hmw-site.js" type="text/javascript"></script>
+		<script src="app/js/services.js" type="text/javascript"></script>
+		<script src="app/js/controllers.js" type="text/javascript"></script>
+		<script src="app/js/filters.js" type="text/javascript"></script>
+		<script src="app/js/directives.js" type="text/javascript"></script>
+	</body>
+</html>

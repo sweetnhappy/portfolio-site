@@ -1,0 +1,37 @@
+[
+	{
+		"id": "home",
+		"name": "Home",
+		"url": "index.html",
+		"alt": "Home",
+		"icon": "glyphicon-home"
+	},
+	{
+		"id": "about",
+		"name": "About",
+		"url": "about.html",
+		"alt": "Learn Some Interesting Things About Me",
+		"icon": "glyphicon-user"
+	},
+	{
+		"id": "resume",
+		"name": "Resume",
+		"url": "resume.html",
+		"alt": "View My Online Resume",
+		"icon": "glyphicon-list-alt"
+	},
+	{
+		"id": "portfolio",
+		"name": "Portfolio",
+		"url": "portfolio.html",
+		"alt": "See Details, Screenshots, and/or Code Samples of My Past Work",
+		"icon": "glyphicon-briefcase"
+	},
+	{
+		"id": "contact",
+		"name": "Contact",
+		"url": "contact.html",
+		"alt": "Get In Touch",
+		"icon": "glyphicon-earphone"
+	}
+]

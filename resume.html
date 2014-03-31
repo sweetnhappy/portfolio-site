@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="hmwSite" ng-init="currentPage='resume'">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Helmut Wollenberg - Junior Software Developer - Resume</title>
+
+		<!-- Stylesheets -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+		<link href="css/blueimp-gallery.min.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap-image-gallery.min.css" rel="stylesheet" type="text/css">
+		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="app/css/hmw-site.css" rel="stylesheet" type="text/css">
+
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" type="text/javascript"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" type="text/javascript"></script>
+		<![endif]-->
+	</head>
+	<body class="hmw-document" role="document">
+	
+		<!-- Fixed Navbar -->
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<span class="navbar-brand">Helmut Wollenberg</span>
+				</div>
+				
+				<div ng-controller="NavbarLinksCtrl" class="navbar-collapse collapse pull-right">
+					<ul class="nav navbar-nav">
+						<li ng-repeat="link in navbarLinks" ng-class="{'active': isLinkActive(link.id)}">
+							<a ng-href="{{isLinkActive(link.id) ? '#' : link.url}}" alt="{{link.alt}}">
+								<span class="glyphicon {{link.icon}}"></span>&nbsp;&nbsp;{{link.name}}
+							</a>
+						</li>
+					</ul>
+				</div><!-- /.nav-collapse -->
+				
+			</div>
+		</div>
+		
+		<!-- Main Content -->
+		<div class="container" role="main">
+			
+			<noscript>
+				<div class="alert alert-warning">
+					<strong>Note: </strong>This site requires Javascript to be enabled.
+				</div>
+			</noscript>
+			
+			<div class="well hmw-well">
+				<h2 class="hmw-well-header">
+					Online Resume
+				</h2>
+				<div class="alert alert-info alert-dismissable alert-spacer">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<p>
+						<strong>Hint: </strong>hover over (or tap on a touch screen) underlined items for additional details or explanation.
+					</p>
+				</div>				
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<h4>
+							<span class="glyphicon glyphicon-wrench"></span>&nbsp;&nbsp;Knowledge and Skills:
+						</h4>
+						<p>
+							<strong>Software Development Methodologies</strong>
+						</p>
+						<ul>
+							<li>
+								Agile development, specifically SCRUM
+							</li>
+							<li>
+								<span class="nowrap">Behaviour Driven Development</span> (SpecFlow) and
+								<span class="nowrap">Test Driven Development</span>
+							</li>
+							<li>
+								<span class="nowrap underline" title="Command Query Responsibility Segregation" data-toggle="tooltip" data-placement="top">CQRS</span>,
+								<span class="nowrap">Event Sourcing</span>,
+								<span class="nowrap">Inversion of Control</span>, and
+								<span class="nowrap">Dependency Injection</span>
+							</li>
+							<li>
+								Source Control including Subversion (SVN) and Git
+							</li>
+							<li>
+								<span class="nowrap">Continuous Integration</span> and
+								<span class="nowrap">Continuous Deployment</span> via TeamCity
+							</li>
+						</ul>
+						<p>
+							<strong>Software Development Languages</strong>
+						</p>
+						<ul>
+							<li>
+								<span class="nowrap underline" title="Java SE 2 to 6" data-toggle="tooltip" data-placement="top">Java SE</span>
+								including AWT and Swing (proficient) and
+								<span class="nowrap underline" title="Java EE 6, including JSPs and Apache Tomcat"
+									  data-toggle="tooltip" data-placement="top">Java EE</span> (prior experience)
+							</li>
+							<li>XHTML/HTML 4 and <span class="nowrap">HTML 5</span> (proficient)
+							</li>
+							<li>C# .NET 3.5 and 4 (proficient)
+							</li>
+							<li>
+								ASP.NET MVC 3 and 4 (proficient),
+								<span class="nowrap underline" title="RESTful API" data-toggle="tooltip" data-placement="top">ASP.NET Web API</span> (prior experience)
+							</li>
+							<li>
+								<span class="nowrap underline" title="Razor View Engine for ASP.NET MVC 3+"
+									  data-toggle="tooltip" data-placement="top">C# Razor Templating</span> (proficient),
+								<span class="nowrap">JSON.NET</span> (proficient),
+								<span class="nowrap underline" title="Inversion of Control (IOC) Container for .NET (used for Dependency Injection)"
+									  data-toggle="tooltip" data-placement="top">Autofac</span> (prior experience)
+							</li>
+							<li>
+								Javascript,
+								<span class="nowrap underline" title="jQuery version 1.6 and higher" data-toggle="tooltip" data-placement="top">jQuery</span>,
+								AJAX, JSON, and
+								<span class="nowrap underline" title="Bootstrap version 2.0 and higher; Formerly Known as Twitter Bootstrap"
+									  data-toggle="tooltip" data-placement="top">Bootstrap</span> (proficient)
+							</li>
+							<li>
+								AngularJS, CSS 3 (prior experience)
+							</li>
+							<li>
+								SQL, <span class="nowrap">PHP 5</span>, <span class="nowrap">ActionScript 3</span>, and
+								<span class="nowrap underline" title="iPhone OS 2.1 SDK" data-toggle="tooltip"
+									  data-placement="top">Objective-C</span> (prior experience)
+							</li>
+						</ul>
+						<p>
+							<strong>Software Development Technologies</strong>
+						</p>
+						<ul>
+							<li>
+								Windows Azure (<span class="nowrap">Cloud Services</span>,
+								<span class="nowrap">Blob and Table Storage</span>, <span class="nowrap">SQL Database</span>, and
+								<span class="nowrap">Service Bus</span> - prior experience)</li>
+							<li>
+								SQL DBMSs including MySQL, PostgreSQL, and <span class="nowrap">Oracle 10g</span> (prior experience)
+							</li>
+							<li>
+								NUnit and <span class="nowrap underline" title="Dynamic Mock Object Framework for .NET"
+									  data-toggle="tooltip" data-placement="top">Rhino Mocks</span> (prior experience)
+							</li>
+						</ul>
+						<p>
+							<strong>Operating Systems</strong>
+						</p>
+						<ul>
+							<li>Mac OS X - 10.2 (Jaguar) to 10.8 (Mountain Lion)</li>
+							<li>Windows 2000, XP, 7, 2000 Server, and 2003 Server</li>
+							<li>Linux - Fedora, openSUSE, and Debian</li>
+						</ul>
+					</div><!-- / Knowledge and Skills -->
+					
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						<h4>
+							<span class="glyphicon glyphicon-briefcase"></span>&nbsp;&nbsp;Work Experience:
+						</h4>
+						<ul>
+							<li>
+								<strong>2012-2013 (12 months) -
+								<a href="http://www.sitedocs.com/" alt="SiteDocs Safety Corp.">SiteDocs Safety Corp.</a>,
+								Abbotsford, BC</strong>
+								<ul>
+									<li>
+										Junior Software Developer - C#/Web Development Team
+									</li>
+									<li>
+										Created a large portion of web-based control panel UI using Bootstrap, jQuery, and
+										AngularJS, which allows clients to perform administration tasks on their account
+									</li>
+									<li>
+										Actively participated in creating the back-end infrastructure using C# .NET 4,
+										Event Sourcing, and Windows Azure, which led to the desired functionality of SiteDocs
+									</li>
+									<li>
+										Produced unit and end-to-end tests using NUnit, Rhino Mocks, and SpecFlow to provide test
+										coverage and a basis for sanity testing the server side infrastructure
+									</li>
+								</ul>
+							</li><br />
+							<li>
+								<strong>2010 (3 months) -
+								<a href="http://www.scorpionsoft.com/" alt="Scorpion Software Corp.">Scorpion Software Corp.</a>,
+								Chilliwack, BC</strong>
+								<ul>
+									<li>
+										Software Developer - Independent Project
+									</li>
+									<li>
+										Developed a Windows Service (AuthAnvil ADUS) using C# .NET 3.5 and web services that allows
+										security group membership synchronization within Active Directory
+									</li>
+								</ul>
+							</li><br />
+							<li>
+								<strong>2009 (4 months) -
+								<a href="http://www.scorpionsoft.com/" alt="Scorpion Software Corp.">Scorpion Software Corp.</a>,
+								Chilliwack, BC</strong>
+								<ul>
+									<li>
+										Software Developer - iPhone Team
+									</li>
+									<li>
+										Created the majority of the UI using XCode's Interface Builder and Objective-C to provide
+										a software-based token on the iPhone for AuthAnvil two-factor authentication
+									</li>
+									<li>
+										Assisted in the integration of the UI with the back-end server using Objective-C and
+										ANSI C libraries, which exceeded expectations by producing a functional product
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div><br /><!-- / Work Experience -->
+					
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<h4><span class="glyphicon glyphicon-certificate"></span>&nbsp;&nbsp;Education and Training:</h4>
+						<ul>
+							<li>
+								<strong>2007-2010 -
+								<a href="http://www.ufv.ca/" alt="University of the Fraser Valley">University of the Fraser Valley</a>,
+								Abbotsford, BC</strong>
+								<ul>
+									<li>Bachelor's Degree in Computer Information Systems - Dean's List</li>
+									<li>Software Development Concentration</li>
+									<li>Member of Computer Information Systems Student Association</li>
+								</ul>
+							</li><br />
+							<li>
+								<strong>2007-2008 - Prometric Services</strong>
+								<ul>
+									<li>Apple Certified Macintosh Technician</li>
+									<li>Apple Certified Technical Coordinator 10.4</li>
+									<li>Apple Certified Help Desk Specialist 10.4</li>
+									<li>
+										Microsoft Certified Professional:
+										<ul>
+											<li>Managing and Maintaining a Microsoft Windows Server 2003 Environment (70-290)</li>
+										</ul>
+									</li>
+								</ul>
+							</li><br />
+							<li>
+								<strong>2004-2006 -
+								<a href="http://www.ufv.ca/" alt="University of the Fraser Valley">University of the Fraser Valley</a>,
+								Abbotsford, BC</strong>
+								<ul>
+									<li>Business Administration Diploma - Dean's List</li>
+									<li>Member of Business Administration Student Association</li>
+								</ul>
+							</li><br />
+							<li>
+								<strong>2003 - Prometric Services</strong>
+								<ul>
+									<li>CompTIA A+ Certified (PC Repair)</li>
+								</ul>
+							</li><br />
+							<li>
+								<strong>2000-2004 -
+								<a href="http://www.sardissecondary.ca/" alt="Sardis Secondary School">Sardis Secondary School</a>,
+								Chilliwack, BC</strong>
+								<ul>
+									<li>Certificate of Graduation</li>
+								</ul>
+							</li><br />
+						</ul>
+					</div><!-- / Education and Training -->
+					
+					<div class="col-xs-12 col-md-6">
+						<h4>
+							<i class="fa fa-users"></i>&nbsp;&nbsp;<span class="fa-adjustment">Community Involvement:</span>
+						</h4>
+						<p><strong>Meetup Groups:</strong></p>
+						<ul>
+							<li>
+								<strong>
+									<a href="http://www.meetup.com/VanWebApp/" alt="VanWebApp">
+										VanWebApp
+									</a>
+								</strong>
+								<ul>
+									<li>March 2014 - Present</li>
+								</ul>
+							</li>
+							<li>
+								<strong>
+									<a href="http://www.meetup.com/NET-User-Group-of-BC/" alt=".NET User Group of BC">
+										.NET User Group of BC
+									</a>
+								</strong>
+								<ul>
+									<li>March 2014 - Present</li>
+								</ul>
+							</li>
+							<li>
+								<strong>
+									<a href="http://www.meetup.com/HackerNestVAN/" alt="HackerNest Vancouver Tech Socials">
+										HackerNest Vancouver Tech Socials
+									</a>
+								</strong>
+								<ul>
+									<li>January 2014 - Present</li>
+								</ul>
+							</li>
+							<li>
+								<strong>
+									<a href="http://www.meetup.com/Agile-Vancouver/" alt="Agile Vancouver">
+										Agile Vancouver
+									</a>
+								</strong>
+								<ul>
+									<li>January 2014 - Present</li>
+								</ul>
+							</li>
+							<li>
+								<strong>
+									<a href="http://www.meetup.com/VanDev/" alt="VanDev (Vancouver's Software Developers Network)">
+										VanDev (Vancouver's Software Developers Network)
+									</a>
+								</strong>
+								<ul>
+									<li>January 2014 - Present</li>
+								</ul>
+							</li>
+						</ul>
+						<p><strong>Organizations:</strong></p>
+						<ul>
+							<li>
+								<strong>Computer Information Systems Student Association (CISSA)</strong>
+								<ul>
+									<li>May 2009 - April 2011</li>
+									<li>Treasurer</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Business Administration Student Association (BASA)</strong>
+								<ul>
+									<li>2005 - 2006</li>
+								</ul>
+							</li>
+						</ul><br /><!-- / Community Involvement -->
+						
+						<h4>
+							<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;References available upon request.
+						</h4>
+					</div>
+				</div>
+			</div>
+			
+		</div> <!-- /container -->
+		
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="container">
+				<p class="text-center">Copyright &copy; 2014 Helmut Wollenberg</p>
+			</div>
+		</footer>
+		
+		<!-- Scripts -->
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/jquery.blueimp-gallery.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap-image-gallery.min.js" type="text/javascript"></script>
+		<script src="angular_components/angular.min.js" type="text/javascript"></script>
+		<script src="angular_components/angular-resource.min.js" type="text/javascript"></script>
+		<script src="app/js/hmw-site.js" type="text/javascript"></script>
+		<script src="app/js/services.js" type="text/javascript"></script>
+		<script src="app/js/controllers.js" type="text/javascript"></script>
+		<script src="app/js/filters.js" type="text/javascript"></script>
+		<script src="app/js/directives.js" type="text/javascript"></script>
+	</body>
+</html>
