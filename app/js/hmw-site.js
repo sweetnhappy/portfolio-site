@@ -2,28 +2,8 @@
 
 /* jQuery Application Level */
 
-(function($){ 
-	jQuery.fn.mailto = function() {
-		return this.each(function(){
-			var email = $(this).html().replace(/\s*\(.{3}\)\s*/, ".");
-			email = email.replace(/\s*\(.{2}\)\s*/, "@");
-			email = email.replace(/\s*\(.{3}\)\s*/, ".");
-			$(this).before('<a href="mailto:' + email + '" rel="nofollow" alt="Email ' + email + '" title="Email ' + email + '">' + email + '</a>').remove();
-		});
-	};
-})(jQuery);
-
 $('a').tooltip();
 $('span').tooltip();
-
-if ( $('a.email').length > 0 ) {
-	$('a.email').mailto();
-}
-
-$('#phone').text(function(i, text) {
-	text = text.replace(/(\d{3})\(dash\)(\d{3})\(dash\)(\d{4})/, "$1-$2-$3");
-	return text;
-});
 
 /* Application Level */
 

@@ -24,7 +24,7 @@
 	
 		<!-- Fixed Navbar -->
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="container">
+			<div class="container ng-cloak" ng-cloak>
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 						<span class="sr-only">Toggle navigation</span>
@@ -39,7 +39,7 @@
 					<ul class="nav navbar-nav">
 						<li ng-repeat="link in navbarLinks" ng-class="{'active': isLinkActive(link.id)}">
 							<a ng-href="{{isLinkActive(link.id) ? '#' : link.url}}" alt="{{link.alt}}">
-								<span class="glyphicon {{link.icon}}"></span>&nbsp;&nbsp;{{link.name}}
+								<i class="fa fa-lg {{link.icon}}"></i>&nbsp;&nbsp;{{link.name}}
 							</a>
 						</li>
 					</ul>
@@ -64,32 +64,38 @@
 				<p class="lead">
 					So you want to get in touch with me?&nbsp;&nbsp;Great!&nbsp;&nbsp;Please use one of the following methods:
 				</p>
-				<h3>
-					<span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;Email: 
-					<a href="helmut(dot)chwk(at)gmail(dot)com" class="email">
-						helmut(dot)chwk(at)gmail(dot)com
-					</a>
-				</h3>
-				<h3>
-					<span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Phone: 
-					<span id="phone">604(dash)858(dash)6835</span>
-				</h3>
+				<h4>
+					<i class="fa fa-fw fa-envelope-o"></i>&nbsp;
+					<span class="fa-adjustment">Email: 
+						<span class="ng-cloak" ng-cloak>
+							<a rel="nofollow" ng-href="mailto:{{'helmut(dott)chwk(att)gmail(dott)com' | renderContactInfo }}">
+								{{'helmut(dott)chwk(att)gmail(dott)com' | renderContactInfo}}
+							</a>
+						</span>
+					</span>
+				</h4>
+				<h4>
+					<i class="fa fa-fw fa-phone"></i>&nbsp;
+					<span class="fa-adjustment">Phone:
+						<span class="ng-cloak" ng-cloak>{{'604(dott)858(dott)6835' | renderContactInfo}}</span>
+					</span>
+				</h4>
 				<hr class="hr hmw-hr" />
 				<p class="lead">
 					Want more?&nbsp;&nbsp;Here are some links to other sites around the web where I have accounts:
 				</p>
-				<h3>
-					<i class="fa fa-github fa-lg"></i>&nbsp;&nbsp;
+				<h4>
+					<i class="fa fa-fw fa-github"></i>&nbsp;
 					<span class="fa-adjustment">
 						GitHub: <a href="https://github.com/sweetnhappy" target="_blank" alt="My GitHub Account" title="My GitHub Account" data-toggle="tooltip" data-placement="bottom">sweetnhappy</a>
 					</span>
-				</h3>
-				<h3>
-					<i class="fa fa-linkedin-square fa-lg"></i>&nbsp;&nbsp;
+				</h4>
+				<h4>
+					<i class="fa fa-fw fa-linkedin-square"></i>&nbsp;
 					<span class="fa-adjustment">
 						LinkedIn: <a href="http://ca.linkedin.com/pub/helmut-wollenberg/92/8b7/20b/" target="_blank" alt="My LinkedIn Account" title="My LinkedIn Account" data-toggle="tooltip" data-placement="bottom">Helmut Wollenberg</a>
 					</span>
-				</h3>
+				</h4>
 			</div>
 			
 		</div> <!-- /container -->
