@@ -8,10 +8,9 @@ hmwSite.filters = angular.module('filters', []);
 
 hmwSite.filters.filter('renderContactInfo', function () {
 	return function (input) {
-		//var input = "helmut(dott)chwk(att)gmail(dott)com";
 		var output = input || "";
-		var decoys = ["(dott)", "(dashh)", "(att)"];
-		var replacements = [".", "-", "@"];
+		var decoys = ["dott", "dashh", "att", "nospam"];
+		var replacements = [".", "-", "@", ""];
 		var index = -1;
 		
 		for (var i = 0; i < decoys.length; i++) {
