@@ -1,0 +1,37 @@
+[
+	{
+		"id": "home",
+		"name": "Home",
+		"url": "index.html",
+		"alt": "Home",
+		"icon": "fa-home"
+	},
+	{
+		"id": "drive",
+		"name": "Drive",
+		"url": "drive.html",
+		"alt": "Drive to Metro Vancouver",
+		"icon": "hmw-icon-car"
+	},
+	{
+		"id": "bus",
+		"name": "Bus",
+		"url": "bus.html",
+		"alt": "Riding the Bus",
+		"icon": "hmw-icon-bus"
+	},
+	{
+		"id": "skytrain",
+		"name": "Skytrain",
+		"url": "skytrain.html",
+		"alt": "Riding the Skytrain",
+		"icon": "hmw-icon-skytrain"
+	},
+	{
+		"id": "quickstart",
+		"name": "Quick Start",
+		"url": "quickstart.html",
+		"alt": "Quick Start Guide (Langley to Waterfront)",
+		"icon": "fa-forward"
+	}
+]

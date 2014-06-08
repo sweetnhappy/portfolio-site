@@ -29,9 +29,9 @@
 	},
 	{
 		"id": "contact",
-		"name": "Contact",
+		"name": "Contact & Links",
 		"url": "contact.html",
-		"alt": "Get In Touch",
-		"icon": "fa-pencil"
+		"alt": "Get In Touch And See My Other Sites",
+		"icon": "fa-link"
 	}
 ]

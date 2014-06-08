@@ -96,6 +96,16 @@
 	top: 10px;
 }
 
+.hmw-nav-list > span:before {
+	content: '\2022';
+	padding-right: 0.4em;
+	margin-left: 0.2em;
+}
+
+.hmw-nav-list > span:first-child:before {
+	content: none;
+}
+
 .blueimp-gallery > .slides > .slide > .slide-content {
 	margin: auto;
 	width: auto;

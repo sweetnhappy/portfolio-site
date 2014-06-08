@@ -1,0 +1,84 @@
+/* app css stylesheet */
+
+[ng-cloak] {
+	display: none;
+}
+
+.hmw-document {
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+
+.hmw-well {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.hmw-well-header {
+	margin-top: 0;
+}
+
+.hmw-well-separator {
+	margin-bottom: 0;
+}
+
+.hmw-hr {
+	border-color: #CCCCCC;
+}
+
+.about-spacer {
+	position: relative;
+	top: -5px;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.fa-adjustment {
+	position: relative;
+	top: 2px;
+}
+
+.alert-spacer {
+	position: relative;
+	top: 10px;
+}
+
+.navbar-inverse {
+    background-image: linear-gradient(to bottom, #006699 0px, #005588 100%);
+    background-repeat: repeat-x;
+}
+
+.navbar-inverse {
+    background-color: #005588;
+    border-color: #080808;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #BBBBBB;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #BBBBBB;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+    background-image: linear-gradient(to bottom, #116699 0px, #005588 100%);
+    background-repeat: repeat-x;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.25) inset;
+}
+
+.hmw-nav-list > span:before {
+	content: '\2022';
+	padding-right: 0.4em;
+	margin-left: 0.2em;
+}
+
+.hmw-nav-list > span:first-child:before {
+	content: none;
+}
