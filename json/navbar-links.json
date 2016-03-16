@@ -4,34 +4,47 @@
 		"name": "Home",
 		"url": "index.html",
 		"alt": "Home",
-		"icon": "fa-home"
+		"icon": "fa-home",
+		"longName": "Home"
 	},
 	{
 		"id": "about",
 		"name": "About",
 		"url": "about.html",
 		"alt": "Learn Some Interesting Things About Me",
-		"icon": "fa-user"
+		"icon": "fa-user",
+		"longName": "About Me"
+	},
+	{
+		"id": "blog",
+		"name": "Blog",
+		"url": "blog/",
+		"alt": "My Contemplations about Development, Anime, and Transit",
+		"icon": "fa-wordpress",
+		"longName": "Blog"
 	},
 	{
 		"id": "resume",
 		"name": "Resume",
 		"url": "resume.html",
 		"alt": "View My Online Resume",
-		"icon": "fa-list-ul"
+		"icon": "fa-list-ul",
+		"longName": "Online Resume"
 	},
 	{
 		"id": "portfolio",
 		"name": "Portfolio",
 		"url": "portfolio.html",
 		"alt": "See Details, Screenshots, and/or Code Samples of My Past Work",
-		"icon": "fa-briefcase"
+		"icon": "fa-briefcase",
+		"longName": "Software Development Portfolio"
 	},
 	{
 		"id": "contact",
-		"name": "Contact & Links",
+		"name": "Contact",
 		"url": "contact.html",
-		"alt": "Get In Touch And See My Other Sites",
-		"icon": "fa-link"
+		"alt": "Get In Touch and See My Other Sites",
+		"icon": "fa-envelope",
+		"longName": "Contact Me & Links"
 	}
 ]

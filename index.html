@@ -13,20 +13,20 @@
 		<link href="css/blueimp-gallery.min.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap-image-gallery.min.css" rel="stylesheet" type="text/css">
 		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="app/css/hmw-site.css" rel="stylesheet" type="text/css">
+		<link href="app/css/hmw-site.min.css" rel="stylesheet" type="text/css">
 
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" type="text/javascript"></script>
 		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" type="text/javascript"></script>
 		<![endif]-->
 	</head>
-	<body class="hmw-document" role="document">
+	<body ng-controller="NavbarLinksCtrl" class="hmw-document" role="document">
 	
 		<!-- Fixed Navbar -->
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container ng-cloak" ng-cloak>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<div class="navbar-header hmw">
+					<button type="button" class="navbar-toggle hmw" data-toggle="collapse" data-target=".hmw-navbar-collapse">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -35,7 +35,7 @@
 					<span class="navbar-brand">Helmut Wollenberg</span>
 				</div>
 				
-				<div ng-controller="NavbarLinksCtrl" class="navbar-collapse collapse pull-right">
+				<div class="hmw-navbar-collapse collapse pull-right">
 					<ul class="nav navbar-nav">
 						<li ng-repeat="link in navbarLinks" ng-class="{'active': isLinkActive(link.id)}">
 							<a ng-href="{{isLinkActive(link.id) ? '#' : link.url}}" alt="{{link.alt}}">
@@ -72,10 +72,7 @@
 				</p>
 				
 				<p class="hmw-well-separator hmw-nav-list" style="font-size: 150%;">
-					<span><a href="about.html" alt="Learn Some Interesting Things About Me">About Me</a></span>
-					<span><a href="resume.html" alt="View My Online Resume">Online Resume</a></span>
-					<span><a href="portfolio.html" alt="See Screenshots and/or Code Samples Of My Past Work">Software Development Portfolio</a></span>
-					<span><a href="contact.html" alt="Get In Touch And See My Other Sites">Links &amp; Contact Me</a></span>
+					<span ng-repeat="link in navbarLinks" ng-if="link.id != 'home'"><a ng-href="{{link.url}}" alt="{{link.alt}}">{{link.longName}}</a> </span>
 				</p>
 			</div>
 			
@@ -95,7 +92,7 @@
 		<script src="js/bootstrap-image-gallery.min.js" type="text/javascript"></script>
 		<script src="angular_components/angular.min.js" type="text/javascript"></script>
 		<script src="angular_components/angular-resource.min.js" type="text/javascript"></script>
-		<script src="app/js/hmw-site.js" type="text/javascript"></script>
+		<script src="app/js/hmw-site.min.js" type="text/javascript"></script>
 		<script src="app/js/services.js" type="text/javascript"></script>
 		<script src="app/js/controllers.js" type="text/javascript"></script>
 		<script src="app/js/filters.js" type="text/javascript"></script>

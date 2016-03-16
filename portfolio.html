@@ -13,20 +13,20 @@
 		<link href="css/blueimp-gallery.min.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap-image-gallery.min.css" rel="stylesheet" type="text/css">
 		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="app/css/hmw-site.css" rel="stylesheet" type="text/css">
+		<link href="app/css/hmw-site.min.css" rel="stylesheet" type="text/css">
 
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" type="text/javascript"></script>
 		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" type="text/javascript"></script>
 		<![endif]-->
 	</head>
-	<body class="hmw-document" role="document">
+	<body ng-controller="NavbarLinksCtrl" class="hmw-document" role="document">
 	
 		<!-- Fixed Navbar -->
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container ng-cloak" ng-cloak>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<div class="navbar-header hmw">
+					<button type="button" class="navbar-toggle hmw" data-toggle="collapse" data-target=".hmw-navbar-collapse">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -35,7 +35,7 @@
 					<span class="navbar-brand">Helmut Wollenberg</span>
 				</div>
 				
-				<div ng-controller="NavbarLinksCtrl" class="navbar-collapse collapse pull-right">
+				<div class="hmw-navbar-collapse collapse pull-right">
 					<ul class="nav navbar-nav">
 						<li ng-repeat="link in navbarLinks" ng-class="{'active': isLinkActive(link.id)}">
 							<a ng-href="{{isLinkActive(link.id) ? '#' : link.url}}" alt="{{link.alt}}">
@@ -67,8 +67,115 @@
 					<a href="https://github.com/thebigh2014" target="_blank" alt="My First GitHub Account">thebigh2014</a>), if available.&nbsp;
 					More samples to come.</p>
 				
+				<div class="panel-group" id="accordionZero" class="accordion-top-spacer">
+					<!-- Collapse Panel -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordionZero" href="#collapseZero">
+									ManagementDriver: Web Application - Wardell International
+								</a>
+							</h4>
+						</div>
+						<div id="collapseZero" class="panel-collapse collapse">
+							<div class="panel-body">
+								<ul class="project-collapsible">
+									<li class="portfolio-list-spacer">
+										<strong>Date Started and Ended: September 2014 - July 2015</strong>
+									</li>
+									<li class="portfolio-list-spacer">
+										<strong>Contribution: </strong>Developer on R&amp;D Team, Server-side &amp; Client-side Design, Implementation, and Maintenance</strong>
+									</li>
+									<li class="portfolio-list-spacer">
+										<strong>Technologies Used: </strong>
+										<div class="container-fluid">
+											<div class="row">
+												<div class="col-sm-6 col-md-4">
+													<ul class="multi-column-list-adjustment">
+														<li><span class="nowrap">Symfony 2 PHP Framework</span></li>
+														<li><span class="nowrap">Twig Templating</span></li>
+														<li><span class="nowrap">HTML 5</span></li>
+														<li><span class="nowrap">Doctrine ODM</span></li>
+													</ul>
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+													<ul class="multi-column-list-adjustment">
+														<li>AngularJS</li>
+														<li><span class="nowrap">Bootstrap 3</span></li>
+														<li><span class="nowrap">CSS 3</span></li>
+														<li><span class="nowrap">jQuery 2.1</span> and <span class="nowrap">jQuery UI</span></li>
+													</ul>
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+													<ul class="multi-column-list-adjustment">
+														<li>Git (Bitbucket &amp; Github)</li>
+														<li><span class="nowrap">Mongo NoSQL</span> Database</li>
+														<li>Javascript</li>
+														<li><span class="nowrap">RESTful API</span> with JSON</li>
+													</ul>
+												</div>
+											</div>
+										</div><!-- /.container-fluid -->
+									</li>
+									<li class="portfolio-list-spacer">
+										<strong>Description: </strong>This web application consists of front-end and back-end development
+										along with a NoSQL database.&nbsp;
+										ManagementDriver is a &quot;Total Business Performance Management Platform&quot; including Objective
+										and Task Management with Performance Reporting, Digital Manuals, File Storage aligning with key business
+										areas, Organizational Structure Visualization and Management, and Managerial Resources (such as
+										instructional videos).&nbsp;
+										Not only is it used by Wardell's business clientele, but it is also used internally so everyone at
+										Wardell is familiar with the flagship software product.&nbsp;
+										See <a href="http://www.managementdriver.com/" target="_blank" alt="www.managementdriver.com">www.managementdriver.com</a>
+										for more on these and other facts about ManagementDriver.
+									</li>
+									<li class="portfolio-list-spacer">
+										<strong>Code Samples: </strong>The following Github repositories are open source modules used in
+										ManagementDriver.<br />
+										<ul>
+											<li>
+												<a href="https://github.com/thebigh2014/ez-confirm" target="_blank" alt="ez-confirm">ez-confirm</a>
+											</li>
+											<li>
+												<a href="https://github.com/thebigh2014/ez-alert" target="_blank" alt="ez-alert">ez-alert</a>
+											</li>
+											<li>
+												<a href="https://github.com/thebigh2014/ez-tabs" target="_blank" alt="ez-tabs">ez-tabs</a>
+											</li>
+											<li>
+												<a href="https://github.com/thebigh2014/ez-file-tree" target="_blank" alt="ez-file-tree">ez-file-tree</a>
+											</li>
+											<li>
+												<a href="https://github.com/thebigh2014/AvroSupportBundle" target="_blank" alt="AvroSupportBundle">AvroSupportBundle</a>
+											</li>
+										</ul>
+									</li>
+									<li class="portfolio-ss-comment-spacer">
+										<strong>Screenshot: </strong>
+										<div id="links0" class="accordion-top-spacer">
+											<a href="img/ManagementDriver_SS_01.png" alt="ManagementDriver Screenshot" data-gallery data-mytitle="ManagementDriver Users List">
+												<img src="img/ManagementDriver_SS_01_tb.png" alt="ManagementDriver Screenshot" class="md-tb-image-size" />
+											</a>
+										</div>
+									</li>
+									<li>
+										<strong>Screenshot Comments: </strong>
+										<ul>
+											<li>
+												This screenshot shows the primary layout of the web application with a paginated list view in the content area.
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div> <!-- /.panel -->
+				</div>
+				
 				<div class="panel-group" id="accordionOne" class="accordion-top-spacer">
-					<!-- Collapse Panel 1 -->
+					<!-- Collapse Panel -->
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
@@ -119,8 +226,8 @@
 												
 												<div class="col-sm-6 col-md-4">
 													<ul class="multi-column-list-adjustment">
-														<li>Git</li>
-														<li>DevExpress Xtra Reports</li>
+														<li>Git (Github)</li>
+														<li><span class="nowrap">DevExpress Xtra Reports</span></li>
 														<li>
 															<span class="nowrap">Windows Azure</span>
 															<ul>
@@ -183,7 +290,7 @@
 				</div>
 				
 				<div class="panel-group" id="accordionTwo">
-					<!-- Collapse Panel 2 -->
+					<!-- Collapse Panel -->
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
@@ -246,7 +353,7 @@
 				</div>
 				
 				<div class="panel-group" id="accordionThree">
-					<!-- Collapse Panel 3 -->
+					<!-- Collapse Panel -->
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
@@ -280,7 +387,7 @@
 										<a href="https://github.com/sweetnhappy/multi-chat" alt="Multi Chat Server on Github">Multi Chat Server on Github</a>
 									</li>
 									<li class="portfolio-ss-comment-spacer">
-										<strong>Screenshots: </strong>
+										<strong>Screenshot: </strong>
 										<div id="links3" class="accordion-top-spacer">
 											<a href="img/Multi_Chat_Server_SS.png" alt="Multi Chat Server Screenshot" data-gallery
 											   data-mytitle="Multi Chat Server and Clients">
@@ -307,7 +414,7 @@
 				</div>
 				
 				<div class="panel-group" id="accordionFour">
-					<!-- Collapse Panel 4 -->
+					<!-- Collapse Panel -->
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
@@ -344,7 +451,7 @@
 										<a href="https://github.com/sweetnhappy/mxPhotoOrganizer" alt="mxPhotoOrganizer on Github">mxPhotoOrganizer on Github</a>
 									</li>
 									<li class="portfolio-list-spacer">
-										<strong>Screenshot: </strong>
+										<strong>Screenshots: </strong>
 										<div id="links4" class="accordion-top-spacer">
 											<a href="img/mxPhotoOrganizer_SS_01.png" alt="mxPhotoOrganizer Screenshot 1" data-gallery
 											   data-mytitle="mxPhotoOrganizer Filmstrip View">
@@ -385,7 +492,7 @@
 				</div>
 				
 				<div class="panel-group" id="accordionFive">
-					<!-- Collapse Panel 5 -->
+					<!-- Collapse Panel -->
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h4 class="panel-title">
@@ -487,7 +594,7 @@
 		<script src="js/bootstrap-image-gallery.min.js" type="text/javascript"></script>
 		<script src="angular_components/angular.min.js" type="text/javascript"></script>
 		<script src="angular_components/angular-resource.min.js" type="text/javascript"></script>
-		<script src="app/js/hmw-site.js" type="text/javascript"></script>
+		<script src="app/js/hmw-site.min.js" type="text/javascript"></script>
 		<script src="app/js/services.js" type="text/javascript"></script>
 		<script src="app/js/controllers.js" type="text/javascript"></script>
 		<script src="app/js/filters.js" type="text/javascript"></script>

@@ -13,20 +13,20 @@
 		<link href="css/blueimp-gallery.min.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap-image-gallery.min.css" rel="stylesheet" type="text/css">
 		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="app/css/hmw-site.css" rel="stylesheet" type="text/css">
+		<link href="app/css/hmw-site.min.css" rel="stylesheet" type="text/css">
 
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" type="text/javascript"></script>
 		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" type="text/javascript"></script>
 		<![endif]-->
 	</head>
-	<body class="hmw-document" role="document">
+	<body ng-controller="NavbarLinksCtrl" class="hmw-document" role="document">
 	
 		<!-- Fixed Navbar -->
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container ng-cloak" ng-cloak>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<div class="navbar-header hmw">
+					<button type="button" class="navbar-toggle hmw" data-toggle="collapse" data-target=".hmw-navbar-collapse">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -35,7 +35,7 @@
 					<span class="navbar-brand">Helmut Wollenberg</span>
 				</div>
 				
-				<div ng-controller="NavbarLinksCtrl" class="navbar-collapse collapse pull-right">
+				<div class="hmw-navbar-collapse collapse pull-right">
 					<ul class="nav navbar-nav">
 						<li ng-repeat="link in navbarLinks" ng-class="{'active': isLinkActive(link.id)}">
 							<a ng-href="{{isLinkActive(link.id) ? '#' : link.url}}" alt="{{link.alt}}">
@@ -104,19 +104,18 @@
 						<ul>
 							<li>
 								<span class="nowrap">PHP 5</span> with
-								<span class="nowrap">Symphony 2</span> Framework, AngularJS, and
+								<span class="nowrap">Symfony 2</span> Framework, AngularJS, and
 								<span class="nowrap">Twig Templating</span> (1 year)
 							</li>
 							<li>
 								Javascript,
-								<span class="nowrap underline" title="jQuery version 1.6 and higher" data-toggle="tooltip" data-placement="top">jQuery</span>,
+								<span class="nowrap underline" title="jQuery version 1.6+ and 2.1" data-toggle="tooltip" data-placement="top">jQuery</span>,
 								AJAX, JSON, <span class="nowrap">CSS 3</span> and
-								<span class="nowrap underline" title="Bootstrap version 2.0 and higher; Formerly Known as Twitter Bootstrap"
+								<span class="nowrap underline" title="Bootstrap version 2 and 3"
 									  data-toggle="tooltip" data-placement="top">Bootstrap</span> (2 years)
 							</li>
 							<li>
-								<span class="nowrap">XHTML/HTML 4</span>
-								(3+ years) and <span class="nowrap">HTML 5</span> (1 year+)
+								<span class="nowrap">XHTML/HTML 4</span> and <span class="nowrap">HTML 5</span> (3+ years)
 							</li>
 							<li>
 								<span class="nowrap">C# .NET 3.5 and 4</span>, <span class="nowrap">ASP.NET MVC 3 and 4</span>, and
@@ -146,8 +145,8 @@
 						</p>
 						<ul>
 							<li>
-								<span class="nowrap">MongoDB NoSQL</span>, including
-								<span class="nowrap underline" title="Doctrine Symphony 2 Object Document Mapper" data-toggle="tooltip"
+								<span class="nowrap">MongoDB NoSQL</span> including
+								<span class="nowrap underline" title="Doctrine Symfony 2 Object Document Mapper" data-toggle="tooltip"
 									  data-placement="top">Doctrine ODM</span>, and
 								<span class="nowrap">JavaScript queries</span> (1 year)
 							</li>
@@ -180,12 +179,12 @@
 						</h4>
 						<p>
 							<strong>2014-2015 (11 months) -
-							<a href="http://www.wardell.biz/" alt="Wardell International">Wardell International</a>,
+							<a href="http://www.wardell.biz/" target="_blank" title="Wardell International" alt="Wardell International">Wardell International</a>,
 							Vancouver, BC</strong>
 						</p>
 						<ul>
 							<li style="position: relative; top: -5px;">
-								<strong>Software Developer - R&D Team</strong>
+								<strong>Software Developer - R&amp;D Team</strong>
 							</li>
 							<li>
 								Designed, implemented, tested, and maintained ManagementDriver, a web application
@@ -208,7 +207,7 @@
 						</ul>
 						<p>
 							<strong>2012-2013 (12 months) -
-							<a href="http://www.sitedocs.com/" alt="SiteDocs Safety Corp.">SiteDocs Safety Corp.</a>,
+							<a href="http://www.sitedocs.com/" target="_blank" title="SiteDocs Safety Corp." alt="SiteDocs Safety Corp.">SiteDocs Safety Corp.</a>,
 							Abbotsford, BC</strong>
 						</p>
 						<ul>
@@ -230,7 +229,7 @@
 						</ul>
 						<p>
 							<strong>2010 (3 months) -
-							<a href="http://www.scorpionsoft.com/" alt="Scorpion Software Corp.">Scorpion Software Corp.</a>,
+							<a href="http://www.scorpionsoft.com/"target="_blank" title="Scorpion Software Corp."  alt="Scorpion Software Corp.">Scorpion Software Corp.</a>,
 							Chilliwack, BC</strong>
 						</p>
 						<ul>
@@ -251,7 +250,7 @@
 						<h4><span class="glyphicon glyphicon-certificate"></span>&nbsp;&nbsp;Education and Training:</h4>
 						<p>
 							<strong>2007-2010 -
-							<a href="http://www.ufv.ca/" alt="University of the Fraser Valley">University of the Fraser Valley</a>,
+							<a href="http://www.ufv.ca/" target="_blank" title="University of the Fraser Valley" alt="University of the Fraser Valley">University of the Fraser Valley</a>,
 							Abbotsford, BC</strong>
 						</p>
 						<ul>
@@ -279,7 +278,7 @@
 						</ul>
 						<p>
 							<strong>2004-2006 -
-							<a href="http://www.ufv.ca/" alt="University of the Fraser Valley">University of the Fraser Valley</a>,
+							<a href="http://www.ufv.ca/" target="_blank" title="University of the Fraser Valley" alt="University of the Fraser Valley">University of the Fraser Valley</a>,
 							Abbotsford, BC</strong>
 						</p>
 						<ul>
@@ -294,7 +293,7 @@
 						</ul>
 						<p>
 							<strong>2000-2004 -
-							<a href="http://www.sardissecondary.ca/" alt="Sardis Secondary School">Sardis Secondary School</a>,
+							<a href="http://www.sardissecondary.ca/" target="_blank" title="Sardis Secondary School" alt="Sardis Secondary School">Sardis Secondary School</a>,
 							Chilliwack, BC</strong>
 						</p>
 						<ul>
@@ -335,7 +334,7 @@
 									</a>
 								</strong>
 								<ul>
-									<li>June 2014 - August 2014</li>
+									<li>June 2014 - Present</li>
 								</ul>
 							</li>
 						</ul>
@@ -389,7 +388,7 @@
 		<script src="js/bootstrap-image-gallery.min.js" type="text/javascript"></script>
 		<script src="angular_components/angular.min.js" type="text/javascript"></script>
 		<script src="angular_components/angular-resource.min.js" type="text/javascript"></script>
-		<script src="app/js/hmw-site.js" type="text/javascript"></script>
+		<script src="app/js/hmw-site.min.js" type="text/javascript"></script>
 		<script src="app/js/services.js" type="text/javascript"></script>
 		<script src="app/js/controllers.js" type="text/javascript"></script>
 		<script src="app/js/filters.js" type="text/javascript"></script>

@@ -13,20 +13,20 @@
 		<link href="css/blueimp-gallery.min.css" rel="stylesheet" type="text/css">
 		<link href="css/bootstrap-image-gallery.min.css" rel="stylesheet" type="text/css">
 		<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link href="app/css/hmw-site.css" rel="stylesheet" type="text/css">
+		<link href="app/css/hmw-site.min.css" rel="stylesheet" type="text/css">
 
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" type="text/javascript"></script>
 		  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" type="text/javascript"></script>
 		<![endif]-->
 	</head>
-	<body class="hmw-document" role="document">
+	<body ng-controller="NavbarLinksCtrl" class="hmw-document" role="document">
 	
 		<!-- Fixed Navbar -->
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container ng-cloak" ng-cloak>
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<div class="navbar-header hmw">
+					<button type="button" class="navbar-toggle hmw" data-toggle="collapse" data-target=".hmw-navbar-collapse">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -35,7 +35,7 @@
 					<span class="navbar-brand">Helmut Wollenberg</span>
 				</div>
 				
-				<div ng-controller="NavbarLinksCtrl" class="navbar-collapse collapse pull-right">
+				<div class="hmw-navbar-collapse collapse pull-right">
 					<ul class="nav navbar-nav">
 						<li ng-repeat="link in navbarLinks" ng-class="{'active': isLinkActive(link.id)}">
 							<a ng-href="{{isLinkActive(link.id) ? '#' : link.url}}" alt="{{link.alt}}">
@@ -65,7 +65,8 @@
 						</h2><br />
 						<p style="font-size: 150%; margin-bottom: 20px;">
 							I currently live in Chilliwack, BC.&nbsp;
-							Though it is far away, I don't mind commuting into Vancouver and taking full advantage of public transit whenever possible.
+							Though it is far away, I don't mind commuting into Vancouver and taking full advantage of public transit whenever possible.&nbsp;
+							I also plan to move closer to Vancouver once I gain stable, full-time employment.
 						</p>
 					</div>
 				</div>
@@ -190,7 +191,7 @@
 		<script src="js/bootstrap-image-gallery.min.js" type="text/javascript"></script>
 		<script src="angular_components/angular.min.js" type="text/javascript"></script>
 		<script src="angular_components/angular-resource.min.js" type="text/javascript"></script>
-		<script src="app/js/hmw-site.js" type="text/javascript"></script>
+		<script src="app/js/hmw-site.min.js" type="text/javascript"></script>
 		<script src="app/js/services.js" type="text/javascript"></script>
 		<script src="app/js/controllers.js" type="text/javascript"></script>
 		<script src="app/js/filters.js" type="text/javascript"></script>
